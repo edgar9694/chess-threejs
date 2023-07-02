@@ -281,3 +281,9 @@ window.addEventListener("click", event => {
         clearBoard(i0.object)
     }
 })
+
+window.addEventListener('resize', function () {
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight)  
+  })
